@@ -2,7 +2,7 @@ defmodule Cart.Invoice do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias Cart.{Invoice, InvoiceItem, Repo}
+  alias Cart.{Invoice, InvoiceItem}
 
   @primary_key {:id, :binary_id, autogenerate: true}
   schema "invoices" do
@@ -30,7 +30,7 @@ defmodule Cart.Invoice do
       |> put_assoc(:invoice_items, get_items(params))
 
     if cs.valid? do
-      Repo.insert(cs)
+      TestApp.Repo.insert(cs)
     else
       cs
     end
