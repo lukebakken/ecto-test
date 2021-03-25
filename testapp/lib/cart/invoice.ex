@@ -15,7 +15,7 @@ defmodule Cart.Invoice do
     timestamps()
   end
 
-  @fields ~w(customer amount balance date)
+  @fields ~w(customer amount balance date)a
 
   def changeset(data, params \\ %{}) do
     data

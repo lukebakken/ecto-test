@@ -13,7 +13,7 @@ defmodule Cart.InvoiceItem do
     timestamps()
   end
 
-  @fields ~w(item_id price quantity)
+  @fields ~w(item_id price quantity)a
   @zero Decimal.new(0)
 
   def changeset(data, params \\ %{}) do

@@ -13,7 +13,7 @@ defmodule Cart.Item do
     timestamps()
   end
 
-  @fields ~w(name price)
+  @fields ~w(name price)a
 
   def changeset(data, params \\ %{}) do
     data
